@@ -29,10 +29,11 @@ type Tag struct {
 }
 
 type Properties struct {
-	Type        string      `json:"type,omitempty"`
-	Format      string      `json:"format,omitempty"`
-	Example     interface{} `json:"example,omitempty"`
-	Description string      `json:"description,omitempty"`
+	Type        string            `json:"type,omitempty"`
+	Format      string            `json:"format,omitempty"`
+	Example     interface{}       `json:"example,omitempty"`
+	Description string            `json:"description,omitempty"`
+	Items       map[string]string `json:"items,omitempty"`
 }
 
 type Definition struct {
@@ -59,4 +60,5 @@ type Parameters struct {
 	Required    bool                   `json:"required"`
 	Schema      map[string]interface{} `json:"schema"`
 	Type        string                 `json:"type"`
+	Items       map[string]interface{} `json:"items"`
 }
