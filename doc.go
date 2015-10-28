@@ -49,6 +49,11 @@ func (h H) InitSwagger(s Swagger) H {
 	return h
 }
 
+func GenByJson(jsonStr string) (m map[string]Properties) {
+	json.Unmarshal([]byte(jsonStr), &m)
+	return
+}
+
 func NewH() H {
 	return H{}
 }
